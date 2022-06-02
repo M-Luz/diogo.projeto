@@ -1,0 +1,113 @@
+<! DOCTYPE html>
+<html lang="pt-br">
+<cabeça>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <título>Calculadora</título>
+
+    <estilo>
+        h1{
+            alinhamento de texto: centro;
+        }
+        *{
+            margem: 0%;
+            preenchimento: 0%;
+        }
+ . fundo{
+            altura: 100vh;
+            fonte-família: Arial, Helvetica, sans-serif;
+            cor: branco;
+            imagem de fundo: gradiente linear (45deg,preto, rgb(69, 69, 251))
+        }
+ . Calculadora{
+            posição: absoluta;
+            cor de fundo: rgba (0, 0, 0, 80%);
+            topo: 50%;
+            esquerda: 50%;
+            transformar: traduzir (-50%,-50%);
+            raio-fronteira: 10%;
+            preenchimento: 15px;
+        }
+ . botão{
+            altura: 50px;
+            largura: 50px;
+            tamanho da fonte: 25px;
+            margem: 3px;
+            cursor: ponteiro;
+            cor de fundo: rgb (31,31,31 );
+            fronteira: nenhuma;
+            cor: branco;
+        }
+ . botão:pairar{
+            cor de fundo: preto;
+        }
+        #resultado{
+            cor de fundo: branco;
+            tamanho da fonte: 30px;
+            fonte-família: Arial, Helvetica, sans-serif;
+            cor: preto;
+            alinhamento de texto: centro;
+        }
+    </estilo>
+</cabeça>
+<corpo>
+    <div class="fundo">
+        <h1>Eduardo do Amaral Roque</h1>
+        <div class="Calculadora">
+            <h1>Calculadora</h1>
+            <p id="resultado"></p>
+            <mesa>
+                <!--1 Linha da Calculadora-->
+                <Tr>
+                    <td><button class="botao" onclick="clean()">C</button></td>
+                    <td><button class="botao" onclick="back()"><</button></td>
+                    <td><button class="botao" onclick="insert('/')">/</button></td>
+                    <td><button class="botao" onclick="insert('X')">X</button></td>
+                </Tr>
+                <!--2 Linha da Calculadora-->
+                <Tr>
+                    <td><button class="botao" onclick="insert('7')">7</button></td>
+                    <td><button class="botao" onclick="insert('8')">8</button></td>
+                    <td><button class="botao" onclick="insert('9')">9</button></td>
+                    <td><button class="botao" onclick="insert('-')">-</button></td>
+                </Tr>
+                <!--3 Linha da Calculadora-->
+                <Tr>
+                    <td><button class="botao" onclick="insert('4')">4</button></td>
+                    <td><button class="botao" onclick="insert('5')">5</button></td>
+                    <td><button class="botao" onclick="insert('6')">6</button></td>
+                    <td><button class="botao" onclick="insert('+')">+</botão></td>
+                </Tr>
+                <!--3 Linha da Calculadora-->
+                <Tr>
+                    <td><button class="botao" onclick="insert('1')">1</button></td>
+                    <td><button class="botao" onclick="insert('2')">2</button></td>
+                    <td><button class="botao" onclick="insert('3')">3</button></td>
+                    <td rowspan="2"><button class="botao" style="altura: 106px;" >=</botão></td>
+                </Tr>
+                <!--4 Linha da Calculadora-->
+                <Tr>
+                    <td colspan="2"><button classe="botao" estilo="largura: 105px;" >0</botão></td>
+                    <td><button classe="botao">. </botão></td>
+                </Tr>
+            </mesa>
+        </Div>
+    </Div>
+    <roteiro>
+        inserir função (num)
+        {
+            var numero = documento. getElementById('resultado'). interiorHTML;
+            documento. getElementById('resultado'). innerHTML = numero + num;
+        }
+        função limpa()
+        {
+            documento. getElementById('resultado'). interiorHTML = "";
+        }
+        função de volta()
+        {
+            documento. getElementById('resultado'). interiorHTML = "";
+        }
+    </roteiro>
+</corpo>
+</html>
